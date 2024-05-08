@@ -70,10 +70,10 @@ public class YouthLoan {
 
 
 
-            if (prsntAge >= 18) {
+            if (prsntAge >= 18)
+            {
 
-              boolean inpput12=false;
-              while(!inpput12) {
+
                 System.out.println("是否有自用住宅? 1:有 2:無 :");
                 int type1 = scanner.nextInt();
                 if (type1 == 2) {
@@ -253,6 +253,7 @@ public class YouthLoan {
                       break;
                     } else if (type3 == 1) {
                       System.out.println("尚未符合貸款資格");
+
                       break;
                     } else {
                       System.out.println("輸入數值超出範圍,請重新輸入: ");
@@ -278,8 +279,9 @@ public class YouthLoan {
                   System.out.println("輸入數值超出範圍,請重新輸入: ");
 
                 }
-                inpput12=false;
-              }
+
+
+
 
             }
             else {
