@@ -100,10 +100,13 @@ public class YouthLoan {
 
                               case 1 :
 
+
                                 System.out.println("選擇方案 1: 一段式機動利率 ");
                                 System.out.println("總貸款期數480期");
                                 int loanM=a1.loanFun(type);
 
+//                                利率为基准利率 + 0.585% = 1.72% + 0.585% = 2.305%。
+//                                贷款年限为 40 年，共 40 * 12 = 480 期。
 
                                 double loan1 = (loanM * (0.02305 / 12)) / (1 - Math.pow(1 + (0.02305 / 12), -480));
 
@@ -150,8 +153,8 @@ public class YouthLoan {
                                 double loanP2Mb=(double)loanP2b/1000;
 
                                 //計算總和
-                                double loant2f=loanP2M*2;
-                                double loant2b=loanP2Mb*438;
+                                double loant2f=loanP2M*24;
+                                double loant2b=loanP2Mb*456;
 
                                 double loantt=loant2f+loant2b;
 
@@ -186,61 +189,49 @@ public class YouthLoan {
                                 int loanM3=a1.loanFun(type);
 
 
-                                //第一期利率計算
+                                //第一年利率計算
                                 double loan3 = (loanM3 * (0.02245 / 12)) / (1 - Math.pow(1 + (0.02245 / 12), -480));
                                 double loan33=Math.round(loan3*1000);
                                 int loanP3=(int)loan33;
                                 double loanP3M=(double)loanP3/1000;
 
-//                                int Loantotal3=(loanP2*480)/1000;
 
-
-                                //第二期利率計算
+                                //第二年利率計算
                                 double loan3b = (loanM3 * (0.02345 / 12)) / (1 - Math.pow(1 + (0.02345 / 12), -480));
                                 double loan33b=Math.round(loan3b*1000);
                                 int loanP3b=(int)loan33b;
                                 double loanP3Mb=(double)loanP3b/1000;
 
 
-
-
-                                //後面期數利率計算
+                                //第三年利率計算
                                 double loan3b3 = (loanM3 * (0.02365 / 12)) / (1 - Math.pow(1 + (0.02365 / 12), -480));
                                 double loan33b3=Math.round(loan3b3*1000);
                                 int loanP3b3=(int)loan33b3;
                                 double loanP3Mb3=(double)loanP3b3/1000;
 
 
-
-
-
                                 // 混合式固定利率 計算總和
-//                                double loant3f=loanP3M*2;
-//                                double loant3b=loanP3Mb*438;
-                                // 混合式固定利率 第一期+第二期
-                                double loant3fb=loanP3Mb+loan3b;
+                                double loant3f=loanP3M*12;
+                                double loant3b=loanP3Mb*12;
+                                double loant3bb=loanP3Mb3*456;
+//                                // 混合式固定利率 第一期+第二期
+//                                double loant3fb=loanP3Mb+loan3b;
 
                                 //混合式固定利率 (第一期加第二期)+後面期數總和
-//                                double loantt3=loant3f+loant3b;
+                                double loantt3=loant3f+loant3b+loant3bb;
 
 
 
 
 
 
-                                System.out.println("二段式機動利率 第一期應繳金額 :"+ loanP3M+"萬元");
-                                System.out.println("二段式機動利率 兩期後每期應繳金額 :"+ loanP3Mb+"萬元");
-                                System.out.println("二段式機動利率 總金額為 : "+loantt3+"萬元");
-
-
-
-
-
-
-
-
-
-
+                                System.out.println("混合式固定利率 第一年每期應繳金額 :"+ loanP3M+"萬元");
+                                System.out.println("混合式固定利率 第一年總應繳金額 :"+ loant3f+"萬元");
+                                System.out.println("混合式固定利率 第二年每期應繳金額 :"+ loanP3Mb+"萬元");
+                                System.out.println("混合式固定利率 第二年總應繳金額 :"+ loant3b+"萬元");
+                                System.out.println("混合式固定利率 第三年每期應繳金額 :"+ loanP3Mb3+"萬元");
+                                System.out.println("混合式固定利率 第三年總應繳金額 :"+ loant3bb+"萬元");
+                                System.out.println("混合式固定利率 全總金額為 : "+loantt3+"萬元");
 
 
 
