@@ -40,6 +40,8 @@ public class c64Extend
         cbba ca=new cbba();
         baba b=new baba();
 
+
+
         b.printOut();
         System.out.println(" \nblank test");
 
@@ -53,6 +55,8 @@ public class c64Extend
         b.status="gud";
         b.printOut();
 //        System.out.println();
+
+
 
 
 
