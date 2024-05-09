@@ -57,6 +57,7 @@ public class c63
             String type2=scanner.nextLine();
 
 
+            // 判斷式 置入 身分證格式條件 設定範圍 A~Z範圍 + 數字範圍 ,限定範圍共10碼
             if(type2.matches("[A-Z\\d]{10}"))
 //            if(type2.matches("[" + idStd + "][0-9]{9}")  )
 //                if(type2.matches("[A-Z][\\d]{9}")  )
@@ -91,6 +92,8 @@ public class c63
 
 //            if(type2.matches("\\w+@(\\w+\\.)\\w+"))
 
+
+            // 判斷式 置入電子郵件條件 設定範圍 aA~zZ範圍 + 數字範圍 + 標點符號 (..+*/_=)+ *表示出現0次以上 + @ +aA~zZ範圍 + 數字範圍 + .com ,限定4碼以上
             if(type2.matches("[aA-zZ\\d.+*/=_]*[@aA-zZ.com]{4,}"  ))
             {
                 System.out.println("電子郵件 格式正確 " );
