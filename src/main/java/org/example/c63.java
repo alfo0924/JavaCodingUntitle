@@ -10,8 +10,11 @@ public class c63
 
         //宣告布林值狀態
         boolean tf=false;
+
+
         //利用布林值 建立循環 若不符合條件就會繼續循環 條件判斷式 是否符合tf=true ,若不符合就會繼續循環
         // 若一開始設定布林值為tf=true ,while(!true) 判斷結果則反之
+        //! 代表 反之 所以 若boolean tf1=false; !tf1=true;
         while(!tf) {
             //第一題 學號長度為8 第一個字式D 其餘為數字
             System.out.println("請輸入學生ID input Student Id :");

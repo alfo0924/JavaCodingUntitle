@@ -92,7 +92,7 @@ public class YouthLoan {
             if (prsntAge >= 18)
             {
 
-                //設定布林值 若輸入其他數值或輸入預期範圍之外就繼續輪迴 直到使用者輸入正確指令
+                //建立外循環 設定布林值 若輸入其他數值或輸入預期範圍之外就繼續輪迴 直到使用者輸入正確指令
                 boolean reinput12=false;
                 while(!reinput12) {
 
@@ -105,27 +105,38 @@ public class YouthLoan {
                       System.out.println("未成年子女是否有自用住宅? 1:有 2:無 :");
                       int type3 = scanner.nextInt();
                       if (type3 == 2) {
+
+
+
                         boolean reinput = false;
+                        //建立 內循環 因應若輸入超出範圍就會繼續循環
                         while (!reinput) {
                           System.out.println("請輸入貸款金額 單位(萬): ");
                           int type = scanner.nextInt();
                           if (type >= 0) {
+
+
                             //呼叫貸款金額類別函式
                             a1.loanFun(type);
 
-
+                            //a1.loanFun(type) 為最後類別函式計算後的結果
                             System.out.println("可貸金額:" + a1.loanFun(type) + "萬");
 
                             System.out.println("總貸款期數480期");
 
                             boolean ipq=false;
+                            //建立 內循環2 因應若輸入超出範圍就會繼續循環
+
                             while(!ipq) {
                               boolean rechoose = false;
+
+                              //建立 內循環3 因應若輸入超出範圍就會繼續循環
                               while (!rechoose) {
                                 //用使用者選擇方案
                                 System.out.println("\n請選擇方案: 1.一段式機動利率  2.二段式機動利率： 3.混合式固定利率： ");
 
                                 int type4 = scanner.nextInt();
+                                //使用者輸入的值在放入switch case 判斷取得哪些方法
                                 switch (type4) {
 
 
@@ -139,20 +150,23 @@ public class YouthLoan {
                                     //利率为基准利率 + 0.585% = 1.72% + 0.585% = 2.305%。
                                     //贷款年限为 40 年，共 40 * 12 = 480 期。
 
+
+                                    //貸款公式
                                     double loan1 = (loanM * (0.02305 / 12)) / (1 - Math.pow(1 + (0.02305 / 12), -480));
-
+                                    //算出的值 藉Math.round 四捨五入 在*1000
                                     double loan11 = Math.round(loan1 * 1000);
+                                    //把值轉換 int
                                     int loanP1 = (int) loan11;
-
+                                    //貸款總額*480(期數)/1000
                                     int Loantotal = (loanP1 * 480) / 1000;
 
-
+                                    //每一期個別需要繳的金額
                                     double loanP1M = (double) loanP1 / 1000;
 
                                     System.out.println("一段式機動利率 每期繳交金額 : " + loanP1M + "萬元");
                                     System.out.println("一段式機動利率 總金額為 : " + Loantotal + "萬元");
 
-
+                                    //關閉內迴圈3
                                     rechoose = true;
                                     break;
                                   case 2:
@@ -192,7 +206,7 @@ public class YouthLoan {
                                     System.out.println("二段式機動利率 兩年後每期應繳金額 :" + loanP2Mb + "萬元");
                                     System.out.println("二段式機動利率 總金額為 : " + loantt + "萬元");
 
-
+                                    //關閉內迴圈3
                                     rechoose = true;
                                     break;
 
@@ -252,12 +266,14 @@ public class YouthLoan {
                                     System.out.println("混合式固定利率 第三年總應繳金額 :" + loant3bb + "萬元");
                                     System.out.println("混合式固定利率 全總金額為 : " + loantt3 + "萬元");
 
-
+                                    //關閉內迴圈3
                                     rechoose = true;
                                     break;
 
                                   default:
                                     System.out.println("代號輸入錯誤,請重新輸入方案代號");
+
+                                    //繼續內迴圈3
                                     rechoose = false;
                                     break;
 
@@ -271,14 +287,17 @@ public class YouthLoan {
                               int type4=scanner.nextInt();
                               if(type4==1)
                               {
+                                //繼續內迴圈2
                                 ipq=false;
                               }
                               else if(type4==2)
                                {
+                                 //關閉內迴圈2
                                 ipq=true;
                               }
                               else
                               {  System.out.println("輸入錯誤請重新輸入");
+                                //關閉內迴圈2
                                 ipq=true;
                               }
 
@@ -286,6 +305,7 @@ public class YouthLoan {
                             }
 
                           } else {
+                            //繼續內迴圈
                             reinput = false;
                           }
 
