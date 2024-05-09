@@ -93,8 +93,9 @@ public class c63
 //            if(type2.matches("\\w+@(\\w+\\.)\\w+"))
 
 
-            // 判斷式 置入電子郵件條件 設定範圍 aA~zZ範圍 + 數字範圍 + 標點符號 (..+*/_=)+ *表示出現0次以上 + @ +aA~zZ範圍 + 數字範圍 + .com ,限定4碼以上
-            if(type2.matches("[aA-zZ\\d.+*/=_]*[@aA-zZ.com]{4,}"  ))
+            // 判斷式 置入電子郵件條件 設定範圍 aA~zZ範圍 + 數字範圍 + 標點符號 (..+*/_=)+ *表示出現0次以上 + @ +aA~zZ範圍 + 數字範圍
+            // + .com +.fcu+.edu+.tw+.us+,限定4碼以上
+            if(type2.matches("[aA-zZ\\d.+*/=_]*[@aA-zZ.com.fcu.edu.tw.us.o365]{4,}"  ))
             {
                 System.out.println("電子郵件 格式正確 " );
                 ck2=true;
