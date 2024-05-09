@@ -2,28 +2,36 @@ package org.example;
 import java.util.*;
 import java.time.*;
 
+
 class loan {
+
+  //宣告空值
+
   int loanM;
   int l1;
+
+  //貸款額度方法loanFun
   static int loanFun(int a1) {
     double f1;
     double f2;
     int l1;
     int l2;
-
-
+    //a1代表從main 使用者輸入scanner 值
     f1 = a1 * 0.8;
+    //Math.ceil(f1) 取無條件進位，回傳小於等於所給數字的最大整數
     f2=Math.ceil(f1);
 
+
+    //若貸款金額 乘 8成(0.8)大於1000 後 限度設定最高1000萬
     if (f2 > 1000)
     {
       l1=(int)f2;
      l1=1000;
      l2=l1;
       return l2;
-
+    //回傳l2為1000萬 (最高貸款額度)
     }
-    else
+    else //若貸款額度*0.8 小於1000萬 回傳l1
     {
       l1=(int)f2;
       return l1;
@@ -34,6 +42,7 @@ class loan {
 
 
 
+  //印出結果 當使用者呼叫此類別就會回傳到結果到Main裡
   void printOutLaonM()
   {
 
@@ -51,6 +60,8 @@ public class YouthLoan {
   public static void main(String[] args) {
 
     java.util.Scanner scanner = new java.util.Scanner(System.in);
+
+    //建立物件
     loan a1 = new loan();
 
 
@@ -62,18 +73,26 @@ public class YouthLoan {
         int bm = scanner.nextInt();
         System.out.println("請輸入出生日期 : ");
         int bd = scanner.nextInt();
+        //使用時間套件LocalDate (年,月,日) 抓取特定年月日
         LocalDate birthd = LocalDate.of(by, bm, bd);
+        //抓取現在時間套件
         LocalDate now = LocalDate.now();
+        //利用 時間差 =現在的時間資訊 減掉 特定年月日 等於時間差
         Period p = Period.between(birthd, now);
+
+        //p值 等於時間差.getYears()取年 ,等於年數,年紀
         System.out.println("今年" + p.getYears() + "歲");
+
         int prsntAge=p.getYears();
+        //重新宣告 prsntAge=p值=年紀=年數 也可以不宣告 直接用p.getYears()
 
 
 
+            //把年紀放進判斷式 若年紀大於等於18
             if (prsntAge >= 18)
             {
 
-
+                //設定布林值 若輸入其他數值或輸入預期範圍之外就繼續輪迴 直到使用者輸入正確指令
                 boolean reinput12=false;
                 while(!reinput12) {
 
