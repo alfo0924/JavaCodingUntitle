@@ -51,6 +51,7 @@ public class c64Extend
         System.out.println(" \nblank test");
 
         //帶入值並呼叫方法
+        //由於只能初始化自己不能初始化父層
         b.id=2;
         b.status="gud";
         b.printOut();
