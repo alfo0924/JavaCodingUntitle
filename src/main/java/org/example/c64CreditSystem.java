@@ -19,8 +19,8 @@ class credit {
         newamount = money;
     }
 
-    void setNewAmount(int amount) {
-        newamount = amount;
+    void setNewAmount(int money) {
+        newamount=money;
     }
 }
 
@@ -29,6 +29,7 @@ class withdraw extends credit {
         newamount = newamount - wm;
         System.out.println("提領金額 Withdraw Money : " + wm);
         System.out.println("餘額 Remains :" + newamount);
+        super.setNewAmount(newamount);
     }
 }
 
@@ -37,6 +38,7 @@ class payItem extends credit {
         newamount = newamount - m;
         System.out.println("\n付款金額 :" + m);
         System.out.println("餘額 : " + newamount);
+        super.setNewAmount(newamount);
     }
 }
 
