@@ -36,6 +36,26 @@ class c64c extends c64p
 
 
 }
+class c64a
+{
+void act3()
+    {
+        System.out.println("Act3");
+    }
+
+}
+class c65a
+{
+    void act4()
+    {
+        System.out.println("Act4");
+    }
+    void act44()
+    {
+        System.out.println("Act44");
+    }
+
+}
 
 
 public class c64Class
@@ -79,7 +99,6 @@ public class c64Class
 
 
 //        c64c cp12 =(c64c)cp;
-//
 //        cp12.printOut();
 //        cp12.printOut2();
 //        cp12.act1();
@@ -92,6 +111,13 @@ public class c64Class
         cp11.printOut2();
         cp11.act1();
         cp11.act2();
+
+        System.out.println("\nTEst 測試多型 ");
+        c64a ca=new c64a();
+        c65a c5a=new c65a();
+
+
+
 
 
     }
