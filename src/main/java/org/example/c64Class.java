@@ -36,7 +36,7 @@ class c64c extends c64p
 
 
 }
-class c64a
+class c64a extends c66p
 {
 void act3()
     {
@@ -44,7 +44,7 @@ void act3()
     }
 
 }
-class c65a
+class c65a extends c66p
 {
     void act4()
     {
