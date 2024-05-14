@@ -78,7 +78,7 @@ public class c64RepliCreditSystem
         d1.money=wd.money;
         d1.deposit(50000);
 
-        System.out.println("\nUpdate withdrawal :");
+        System.out.println("\nUpdate withdrawal2 :");
         withdrawal wd1=new withdrawal();
         wd1.money=d1.money;
         wd1.withdrawl(8000);
@@ -87,6 +87,16 @@ public class c64RepliCreditSystem
         deposit d2=new deposit();
         d2.money=wd1.money;
         d2.deposit(33955);
+
+        System.out.println("\nUpdate withdrawal3 :");
+        withdrawal wd2=new withdrawal();
+        wd2.money=d2.money;
+        wd2.withdrawl(10000);
+
+        System.out.println("\nUpdate Deposit4");
+        deposit d3=new deposit();
+        d3.money=wd2.money;
+        d3.deposit(110000);
 
 
 
