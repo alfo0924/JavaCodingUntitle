@@ -56,6 +56,23 @@ class c65a
     }
 
 }
+class c66p {
+    void scp()
+    {
+        System.out.println("scpTest SumConnPrint");
+    }
+}
+class c64ttl
+{
+    void c64sp() {
+        System.out.println();
+    }
+
+}
+
+
+
+
 
 
 
@@ -114,6 +131,7 @@ public class c64Class
         cp11.act2();
 
         System.out.println("\nTEst 測試多型 ");
+
         c64a ca=new c64a();
         c65a c5a=new c65a();
 
