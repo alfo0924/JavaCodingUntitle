@@ -70,12 +70,6 @@ class c64ttl
 
 }
 
-
-
-
-
-
-
 public class c64Class
 {
 
