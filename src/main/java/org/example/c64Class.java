@@ -58,6 +58,7 @@ class c65a
 }
 
 
+
 public class c64Class
 {
 
@@ -115,6 +116,10 @@ public class c64Class
         System.out.println("\nTEst 測試多型 ");
         c64a ca=new c64a();
         c65a c5a=new c65a();
+
+        ca.act3();
+        c5a.act4();
+        c5a.act4();
 
 
 
