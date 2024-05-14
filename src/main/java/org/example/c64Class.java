@@ -17,17 +17,25 @@ class c64c extends c64p
 //    c64c()
 //    {
 //
+
+
 //
 //    }
 
-    //override
+
     void printOut2()
     {
         System.out.println("Hello from java 2");
     }
 
 
+    //override 改寫父類
+    @Override
+    void printOut() {
 
+//        super.printOut();
+        System.out.println("Hello from java3");
+    }
 }
 public class c64Class
 {
@@ -40,6 +48,7 @@ public class c64Class
 
     cp.printOut();
     cc.printOut2();
+    cc.printOut();  //印override
 
 
     }
