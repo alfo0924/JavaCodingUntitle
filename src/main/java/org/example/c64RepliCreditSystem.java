@@ -10,12 +10,10 @@ class creditS
     {
         this.money+=m;
 
-
     }
     void minusCredit(int m)
     {
         this.money-=m;
-
     }
     void printoutAmount()
     {
