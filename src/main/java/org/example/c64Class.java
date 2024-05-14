@@ -1,33 +1,19 @@
 package org.example;
 
-
+//類別練習
 class c64p
 {
-
     void printOut()
     {
-
         System.out.println("Hello from java");
     }
-
 }
-
 class c64c extends c64p
 {
-//    c64c()
-//    {
-//
-
-
-//
-//    }
-
-
     void printOut2()
     {
         System.out.println("Hello from java 2");
     }
-
 
     //override 改寫父類
     @Override
@@ -48,7 +34,7 @@ public class c64Class
 
     cp.printOut();
     cc.printOut2();
-    cc.printOut();  //印override
+    cc.printOut();  //印出override
 
 
     }
