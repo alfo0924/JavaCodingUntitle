@@ -29,7 +29,7 @@ class withdraw extends credit {
         newamount = newamount - wm;
         System.out.println("提領金額 Withdraw Money : " + wm);
         System.out.println("餘額 Remains :" + newamount);
-        super.setNewAmount(newamount);
+        super.setNewAmount(newamount); // 把最後的 放進 父類方法(值)  作更新
     }
 }
 
@@ -38,7 +38,7 @@ class payItem extends credit {
         newamount = newamount - m;
         System.out.println("\n付款金額 :" + m);
         System.out.println("餘額 : " + newamount);
-        super.setNewAmount(newamount);
+        super.setNewAmount(newamount);// 把最後的 放進 父類方法(值)  作更新
     }
 }
 
