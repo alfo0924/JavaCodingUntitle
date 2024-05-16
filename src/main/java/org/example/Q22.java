@@ -14,7 +14,7 @@ public class Q22 {
 
             Scanner scanner= new Scanner(System.in);
 
-            System.out.println("Pleas input your last name and first name: ");
+            System.out.println("Please input your last name and first name: ");
             System.out.println("last name :");
             String lastname=scanner.nextLine();
             System.out.println("first name :");
@@ -23,13 +23,13 @@ public class Q22 {
             if(!lastname.equals(firstname) )
             {
 
-                System.out.println(" \"Hello "+firstname.toUpperCase() +","+
-                        lastname.toUpperCase()+"!\"" );
+                System.out.println(" \"Hello "+lastname.toUpperCase() +","+
+                        firstname.toUpperCase()+"!\"" );
                 input=true;
             }
             else
             {
-                System.out.println("Incorrect! Please input your name again : ");
+                System.out.println("\nIncorrect! Please input your name again : \n");
                 input=false;
             }
 
