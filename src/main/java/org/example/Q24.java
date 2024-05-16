@@ -1,11 +1,11 @@
 package org.example;
 import java.util.*;
-class Student
+class Student //
 {
-    private String name;
-    private int age;
-    private double height;
-    private double weight;
+    private String name; //隱藏 字串 名字
+    private int age;     //隱藏 數值 年紀
+    private double height;//隱藏 浮點 身高
+    private double weight;//隱藏 浮點 體重
 
     void nameNage()
     {

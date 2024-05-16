@@ -1,7 +1,7 @@
 package org.example;
 import java.util.*; //util套件
 
-class getDegree{ //方法:判斷式判斷成績
+class getDegree{ //類別:判斷式判斷成績
     public String getDegree(int grade){ //方法
         String degree = ""; //由於式String 方法所以需要一個字串作返回String值
         if(grade>=90 && grade <=100) //建立判斷式 若成績藉於多少~多少 就換得到相對應成績  &&=或
@@ -36,7 +36,7 @@ class getDegree{ //方法:判斷式判斷成績
         return  degree; //將結果送回去
     }
 }
-class degree //建立方法:取平均(平均5個分數並取四捨五入)
+class degree //類別方法:取平均(平均5個分數並取四捨五入)
 {
     void getDegree(int grade1 , int grade2 , int grade3 , int grade4, int grade5)
     {
@@ -56,7 +56,7 @@ public class Q23
         boolean input=false; //設定Boolean值 預設值為false
         while(!input) //建立循環條件 若等於true 就會離開循環
         {
-            getDegree inputGrade=new getDegree(); //建立物件inputGrade 對應  方法:判斷式判斷成績
+            getDegree inputGrade=new getDegree(); //建立物件inputGrade 對應  類別:判斷式判斷成績
             System.out.println("Please input grade :");
             int inputGrade1=scanner.nextInt(); //建立inputGrade1的scanner 藉輸入scanner.nextInt()取數值
 
@@ -74,7 +74,7 @@ public class Q23
 
 
         System.out.println("Input five course's score :"); //輸入5個成績
-        degree dgree = new degree(); //建立物件dgree 對應 方法:去平均
+        degree dgree = new degree(); //建立物件dgree 對應 類別:取平均
         int degree[]=new int[5]; //建立陣列degree 藉輸入 裝5個分數 進 degree陣列
         for(int i = 0; i<5; i++) { //藉5次循環
             int inputGrade2 = scanner.nextInt(); // 建立輸入數值的scanner inputGrade2
