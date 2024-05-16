@@ -4,7 +4,6 @@ import java.util.*; //Util套件
 public class Q22 {
     public static void main(String[]args)
     {
-
         boolean input=false; //建立Boolean 預設值:false
         while(!input) //建立循環條件 若等於true就會中斷
         {
