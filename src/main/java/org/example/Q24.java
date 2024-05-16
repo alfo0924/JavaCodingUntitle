@@ -31,15 +31,14 @@ class Student //類別:學生
             double Height=height/100; //把身高數值/100 轉換公尺
             double sqrheight=Math.pow(Height ,2); //身高平方 藉數學套件 Math.pow(身高,2次方)
             double BMI=weight/sqrheight; //BMI 公式
-            double bmi=Math.round(BMI);  //BMI 取四捨五入
+            double bmi = Math.round(BMI*100)*0.01; //把BMI的值 *100後四捨五入在*0.01 為了取小數點後兩位
             System.out.println("BMI :"+bmi); //印出BMI值
         }
         else {
 //            double Height = height / 100;
             double sqrheight = Math.pow(height, 2); //身高平方 藉數學套件 Math.pow(身高,2次方)
             double BMI = weight / sqrheight;  //BMI 公式
-            double bmi = Math.round(BMI);     //BMI 取四捨五入
-//            double Bmi=Math.floor(bmi/10000);
+            double bmi = Math.round(BMI*100)*0.01; //把BMI的值 *100後四捨五入在*0.01 為了取小數點後兩位
             System.out.println("BMI :"+bmi); //印出BMI值
 
         }
@@ -68,15 +67,15 @@ class BMI extends Student //類別 BMI 繼承 學生類別
             double Height=height/100;
             double sqrheight=Math.pow(Height ,2);
             double BMI=weight/sqrheight;
-            double bmi=Math.round(BMI);
+            double bmi = Math.round(BMI*100)*0.01; //把BMI的值 *100後四捨五入在*0.01 為了取小數點後兩位
             System.out.println("BMI :"+bmi);
         }
-        else if (height>=1 && height<=2.5&& weight<300 && weight>1) {
-//            double Height = height / 100;
+        else if (height>=1 && height<=2.5&& weight<300 && weight>1)
+        {
+
             double sqrheight = Math.pow(height, 2);
             double BMI = weight / sqrheight;
-            double bmi = Math.round(BMI);
-//            double Bmi=Math.floor(bmi/10000);
+            double bmi = Math.round(BMI*100)*0.01; //把BMI的值 *100後四捨五入在*0.01 為了取小數點後兩位
             System.out.println("BMI :"+bmi);
 
         }
@@ -93,7 +92,9 @@ class BMI extends Student //類別 BMI 繼承 學生類別
             double Height=height/100;
             double sqrheight=Math.pow(Height ,2);
             double BMI=weight/sqrheight;
-            double bmi=Math.round(BMI);
+            double bmi = Math.round(BMI*100)*0.01;
+
+
 //            System.out.println("BMI :"+bmi);
 
             System.out.println("Name :"+name); //印出名子
@@ -102,11 +103,9 @@ class BMI extends Student //類別 BMI 繼承 學生類別
         }
         else if (height>=1 && height<=2.5&& weight<300 && weight>1) {
 //            double Height = height / 100;
-            double sqrheight = Math.pow(height, 2);
-            double BMI = weight / sqrheight;
-            double bmi = Math.round(BMI);
-//            double Bmi=Math.floor(bmi/10000);
-//            System.out.println("BMI :"+Bmi);
+            double sqrheight = Math.pow(height, 2); //身高平方 藉數學套件 Math.pow(身高,2次方)
+            double BMI = weight / sqrheight;        //BMI公式
+            double bmi = Math.round(BMI*100)*0.01;  //把BMI的值 *100後四捨五入在*0.01 為了取小數點後兩位
 
 
             System.out.println("Name :"+name);
@@ -146,8 +145,8 @@ public class Q24
         std1.printOutStudent1();                            //印出1號學生
 
 
-        System.out.println("\nInput student2's info :");
-        scanner.nextLine();
+        System.out.println("\nInput student2's info :");  //請示輸入 2號 學生資訊
+        scanner.nextLine();                                 //清除scanner bug (清理buffer記憶體)
         System.out.println("Please input student2's Name :");
         String std2InputName=scanner.nextLine();
         System.out.println("Please input student2's age  :");
@@ -162,7 +161,7 @@ public class Q24
 
 
         System.out.println("\nInput student3's info :");
-        scanner.nextLine();
+        scanner.nextLine();                                 //清除scanner bug (清理buffer記憶體)
         System.out.println("Please input student3's Name :");
         String std3InputName=scanner.nextLine();
         System.out.println("Please input student3's age  :");
@@ -174,15 +173,6 @@ public class Q24
         BMI std3=new BMI();                            //建立std3 對應 BMI類別
         System.out.println("Student3's Info :");
         std3.printOutInfo(std3InputName,std3InputAge,std3InputHeight,std3InputWeight); // 把scanner放入到 std3並呼叫 方法:印出 名子 年齡 BMI
-
-
-
-
-
-
-
-
-
 
 
 
