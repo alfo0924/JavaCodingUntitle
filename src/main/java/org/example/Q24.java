@@ -81,6 +81,43 @@ class BMI extends Student
 
         }
 
+
+    }
+    void printOutInfo(String name,int age,double height ,double weight)
+    {
+
+
+
+        if(height<250 && height>=2.5 && weight<300 && weight>1)
+        {
+            double Height=height/100;
+            double sqrheight=Math.pow(Height ,2);
+            double BMI=weight/sqrheight;
+            double bmi=Math.round(BMI);
+//            System.out.println("BMI :"+bmi);
+
+            System.out.println("Name :"+name);
+            System.out.println("age :"+age);
+            System.out.println("bmi :"+bmi);
+        }
+        else if (height>=1 && height<=2.5&& weight<300 && weight>1) {
+            double Height = height / 100;
+            double sqrheight = Math.pow(Height, 2);
+            double BMI = weight / sqrheight;
+            double bmi = Math.round(BMI);
+            double Bmi=Math.floor(bmi/10000);
+//            System.out.println("BMI :"+Bmi);
+
+
+            System.out.println("Name :"+name);
+            System.out.println("age :"+age);
+            System.out.println("bmi :"+Bmi);
+
+        }
+
+
+
+
     }
 
 
@@ -105,17 +142,39 @@ public class Q24
         std.BMI(inputHeight,inputWeight);
 
         BMI std1=new BMI();
+        System.out.println("Student1's Info :");
         std1.printOutStudent1();
 
+
         System.out.println("Input student2's info :");
+        scanner.nextLine();
         System.out.println("Please input student2's Name :");
-        double std2InputName=scanner.nextDouble();
+        String std2InputName=scanner.nextLine();
         System.out.println("Please input student2's age  :");
         int std2InputAge=scanner.nextInt();
         System.out.println("Please input student2's height :");
         double std2InputHeight=scanner.nextDouble();
         System.out.println("Please input student2's weight :");
         double std2InputWeight=scanner.nextDouble();
+        BMI std2=new BMI();
+        System.out.println("Student2's Info :");
+        std2.printOutInfo(std2InputName,std2InputAge,std2InputHeight,std2InputWeight);
+
+
+        System.out.println("Input student3's info :");
+        scanner.nextLine();
+        System.out.println("Please input student3's Name :");
+        String std3InputName=scanner.nextLine();
+        System.out.println("Please input student3's age  :");
+        int std3InputAge=scanner.nextInt();
+        System.out.println("Please input student3's height :");
+        double std3InputHeight=scanner.nextDouble();
+        System.out.println("Please input student3's weight :");
+        double std3InputWeight=scanner.nextDouble();
+        BMI std3=new BMI();
+        System.out.println("Student3's Info :");
+        std3.printOutInfo(std3InputName,std3InputAge,std3InputHeight,std3InputWeight);
+
 
 
 
