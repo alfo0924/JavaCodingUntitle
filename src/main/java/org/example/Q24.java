@@ -108,8 +108,15 @@ public class Q24
         std1.printOutStudent1();
 
         System.out.println("Input student2's info :");
+        System.out.println("Please input student2's Name :");
+        double std2InputName=scanner.nextDouble();
+        System.out.println("Please input student2's age  :");
+        int std2InputAge=scanner.nextInt();
+        System.out.println("Please input student2's height :");
+        double std2InputHeight=scanner.nextDouble();
+        System.out.println("Please input student2's weight :");
+        double std2InputWeight=scanner.nextDouble();
 
-        double std2Input=scanner.nextDouble();
 
 
 
