@@ -55,7 +55,7 @@ class BMI extends Student
         double height=166.5;
         double weight=66.6;
         double bmi=24.0;
-        System.out.println("\nName :"+name+"\n"+"age :"+age+"\n"+"bmi :"+bmi+"\n");
+        System.out.println("Name :"+name+"\n"+"age :"+age+"\n"+"bmi :"+bmi+"\n");
 
 
 
@@ -142,11 +142,11 @@ public class Q24
         std.BMI(inputHeight,inputWeight);
 
         BMI std1=new BMI();
-        System.out.println("Student1's Info :");
+        System.out.println("\nStudent1's Info :");
         std1.printOutStudent1();
 
 
-        System.out.println("Input student2's info :");
+        System.out.println("\nInput student2's info :");
         scanner.nextLine();
         System.out.println("Please input student2's Name :");
         String std2InputName=scanner.nextLine();
@@ -161,7 +161,7 @@ public class Q24
         std2.printOutInfo(std2InputName,std2InputAge,std2InputHeight,std2InputWeight);
 
 
-        System.out.println("Input student3's info :");
+        System.out.println("\nInput student3's info :");
         scanner.nextLine();
         System.out.println("Please input student3's Name :");
         String std3InputName=scanner.nextLine();
