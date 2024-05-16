@@ -38,7 +38,23 @@ class getDegree{
         }
 
         return  degree;
+
     }
+}
+class degree
+{
+
+
+    void getDegree(int grade1 , int grade2 , int grade3 , int grade4, int grade5)
+    {
+        double average=((grade1+grade2+grade3+grade4+grade5)/5);
+        int avg=(int)Math.round(average);
+        System.out.println("Average score :"+avg);
+
+
+
+    }
+
 
 }
 
@@ -67,6 +83,35 @@ public class Q23
                 input=false;
             }
         }
+
+
+        System.out.println("Input five course's score :");
+        degree dgree = new degree();
+        int degree[]=new int[5];
+        for(int i = 0; i<5; i++) {
+            int inputGrade2 = scanner.nextInt();
+            degree[i]=inputGrade2;
+
+        }
+        int grade1=degree[0];
+        int grade2=degree[1];
+        int grade3=degree[2];
+        int grade4=degree[3];
+        int grade5=degree[4];
+        dgree.getDegree(grade1,grade2,grade3,grade4,grade5);
+
+
+
+//        for(int i =0;i<degree.length;i++)
+//        {
+//            dgree.getDegree(degree[i]);
+//
+//        }
+
+
+
+
+
 
     }
 
