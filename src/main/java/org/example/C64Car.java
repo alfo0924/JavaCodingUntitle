@@ -65,14 +65,23 @@ class car  //類別:car
     }
     void updateCarId(car car, String carId)
     {
-        boolean input=false;
-        while(!input) {
-            if (carId.equals("C[a-zZ-A-\\d][7])")) {
+
+            boolean input=false;
+            while(!input){
+            if (carId.matches("C[aA-zZ]{2}-[\\d]{3}")) {
                 System.out.println("Correct");
-            input=true;
+                input=true;
+
             } else {
                 System.out.println("Invalid ! Please try again !");
-            input=false;
+//                System.out.println("");
+                Scanner scanner=new Scanner(System.in);
+                System.out.println("Please input CarId :");
+                String inputCarId=scanner.nextLine();
+                carId=inputCarId;
+                input=false;
+
+
             }
         }
     }
@@ -163,7 +172,7 @@ public class C64Car
     Scanner scanner=new Scanner(System.in);
 
 
-    System.out.println("Input carId in order to update carId :");
+    System.out.println("Type in carId to update carId :");
     String inputCarId=scanner.nextLine();
 
     c.updateCarId(c,inputCarId);
