@@ -113,9 +113,8 @@ public class C64Car
     EletronicCarFactory etcf=new EletronicCarFactory();
     etcf.printOut();
 
-
-
-
+    Scanner scanner=new Scanner(System.in);
+    int type=scanner.nextInt();
 
 
 
