@@ -24,7 +24,7 @@ class car  //類別:car
     {
         String charaters=("ABCDEFGHIJKLMOPQRSTUVWXYZ");
         this.carId=carId;
-        StringBuilder carid = new StringBuilder("T");
+        StringBuilder carid = new StringBuilder("C");
         for (int i = 0; i < 2; i++) {
             carid.append(charaters.charAt(random.nextInt(charaters.length())));
         }
@@ -63,12 +63,24 @@ class car  //類別:car
 //        setCarId();    // Generate a new car ID    從方法抓取就可以抓取新的CarID
 //        setColor();    // Generate a new color     從方法抓取就可以抓取新的ColorID
     }
-    void updateCarId(String car, String carId)
+    void updateCarId(car car, String carId)
     {
+        boolean input=false;
+        while(!input) {
+            if (carId.equals("C[a-zZ-A-\\d][7])")) {
+                System.out.println("Correct");
+            input=true;
+            } else {
+                System.out.println("Invalid ! Please try again !");
+            input=false;
+            }
+        }
     }
 
-    void updateCarColor(String car, String carId)
+    void updateCarColor(car car, String carId)
     {
+
+
 
     }
     void printOut()
@@ -84,11 +96,46 @@ class car  //類別:car
 class TaxiFactory extends car //類別:計程車工廠
 {
 
+    @Override // 覆寫父類
+    void setCarId()
+    {
+//        super.setCarId();
+        String charaters=("ABCDEFGHIJKLMOPQRSTUVWXYZ");
+
+        StringBuilder carid = new StringBuilder("T");
+        for (int i = 0; i < 2; i++) {
+            carid.append(charaters.charAt(random.nextInt(charaters.length())));
+        }
+        carid.append('-');
+        for (int i = 0; i < 3; i++) {
+            carid.append(random.nextInt(10));
+        }
+        System.out.println("Set CarId :"+carid);
+
+    }
 
 
 }
 class EletronicCarFactory extends car //類別:電車工廠
 {
+
+    @Override // 覆寫父類
+    void setCarId()
+    {
+//        super.setCarId();
+        String charaters=("ABCDEFGHIJKLMOPQRSTUVWXYZ");
+
+        StringBuilder carid = new StringBuilder("E");
+        for (int i = 0; i < 2; i++) {
+            carid.append(charaters.charAt(random.nextInt(charaters.length())));
+        }
+        carid.append('-');
+        for (int i = 0; i < 3; i++) {
+            carid.append(random.nextInt(10));
+        }
+        System.out.println("Set CarId :"+carid);
+
+    }
 
 
 
@@ -114,7 +161,12 @@ public class C64Car
     etcf.printOut();
 
     Scanner scanner=new Scanner(System.in);
-    int type=scanner.nextInt();
+
+
+    System.out.println("Input carId in order to update carId :");
+    String inputCarId=scanner.nextLine();
+
+    c.updateCarId(c,inputCarId);
 
 
 
