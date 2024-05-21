@@ -1,6 +1,6 @@
 package org.example;
 
-import java.util.Random;
+import java.util.*;
 
 class car  //類別:car
 {
@@ -11,7 +11,6 @@ class car  //類別:car
     private String car;
     Random random=new Random(); //建立隨機取樣套件
     String[] COLORS = {"White", "Black", "Blue"};
-
     int numOfCars;
 
     void SetEngineID() //方法:引擎id
@@ -19,10 +18,6 @@ class car  //類別:car
          enginId=((int)(Math.random()*100000000));
 
         System.out.println("Engine id :"+enginId);
-
-
-
-
 
     }
     void setCarId()
@@ -37,7 +32,6 @@ class car  //類別:car
         for (int i = 0; i < 3; i++) {
             carid.append(random.nextInt(10));
         }
-        carId=carid.toString();
         System.out.println("Set CarId :"+carid);
 
 
@@ -49,7 +43,6 @@ class car  //類別:car
 
 
         System.out.println("Set Color :"+color);
-
 
 
     }
@@ -66,21 +59,12 @@ class car  //類別:car
     {
         int produce=((int)(Math.random()*100));
         System.out.println("Produce cars :"+produce);
-        SetEngineID(); // Generate a new engine ID
-        setCarId();    // Generate a new car ID
-        setColor();    // Generate a new color
-
-
-//
-//        System.out.println("Engine Id :"+ enginId);
-//        System.out.println("Car Id :"+carId);
-//        System.out.println("Color :"+color);
-
+//        SetEngineID(); // Generate a new engine ID 從方法抓取就可以抓取新的EngineID
+//        setCarId();    // Generate a new car ID    從方法抓取就可以抓取新的CarID
+//        setColor();    // Generate a new color     從方法抓取就可以抓取新的ColorID
     }
     void updateCarId(String car, String carId)
     {
-
-
     }
 
     void updateCarColor(String car, String carId)
@@ -89,9 +73,11 @@ class car  //類別:car
     }
     void printOut()
     {
-        System.out.println();
+        produceCar();  // Generate a new produce numbers 從方法抓取及可取得新的產車數量
+        SetEngineID(); // Generate a new engine ID 從方法抓取就可以抓取新的EngineID
+        setCarId();    // Generate a new car ID    從方法抓取就可以抓取新的CarID
+        setColor();    // Generate a new color     從方法抓取就可以抓取新的ColorID
     }
-
 
 
 }
@@ -117,15 +103,15 @@ public class C64Car
 
     System.out.println("\nCarFactory :");
     car c=new car();
-    c.produceCar();
+    c.printOut();
 
     System.out.println("\nTaxi Factory :");
     TaxiFactory tf=new TaxiFactory();
-    tf.produceCar();
+    tf.printOut();
 
     System.out.println("\nEletronicCarFactory :");
     EletronicCarFactory etcf=new EletronicCarFactory();
-    etcf.produceCar();
+    etcf.printOut();
 
 
 
