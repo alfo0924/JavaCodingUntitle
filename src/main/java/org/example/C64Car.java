@@ -22,7 +22,7 @@ class car  //類別:car
 
 
 
-
+        return enginId;
 
     }
     void setCarId()
@@ -96,7 +96,7 @@ class taxiFactory extends car //類別:計程車工廠
 
 
 }
-class ElectronicCarFactory extends car //類別:電車工廠
+class EletronicCarFactory extends car //類別:電車工廠
 {
 
 
