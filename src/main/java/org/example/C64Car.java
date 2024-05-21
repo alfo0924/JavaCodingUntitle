@@ -115,22 +115,17 @@ public class C64Car
     public static void main(String[]args)
     {
 
-    car c=new car();
-    car ca=new car();
-//    c.SetEngineID(); // 印出enginID
-//    c.setCarId();
-//    c.setColor();
-
-
     System.out.println("\nCarFactory :");
+    car c=new car();
     c.produceCar();
-    System.out.println("\n CaTEST");
-    ca.produceCar();
 
     System.out.println("\nTaxi Factory :");
     TaxiFactory tf=new TaxiFactory();
     tf.produceCar();
 
+    System.out.println("\nEletronicCarFactory :");
+    EletronicCarFactory etcf=new EletronicCarFactory();
+    etcf.produceCar();
 
 
 
