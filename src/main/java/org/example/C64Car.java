@@ -18,7 +18,7 @@ class car  //類別:car
     {
          enginId=((int)(Math.random()*100000000));
 
-        System.out.println("\nEngine id :"+enginId);
+        System.out.println("Engine id :"+enginId);
 
 
 
@@ -64,14 +64,17 @@ class car  //類別:car
     }
     void produceCar()
     {
-
-
-
         int produce=((int)(Math.random()*100));
         System.out.println("Produce cars :"+produce);
-        System.out.println("Engine Id :"+ enginId);
-        System.out.println("Car Id :"+carId);
-        System.out.println("Color :"+color);
+        SetEngineID(); // Generate a new engine ID
+        setCarId();    // Generate a new car ID
+        setColor();    // Generate a new color
+
+
+//
+//        System.out.println("Engine Id :"+ enginId);
+//        System.out.println("Car Id :"+carId);
+//        System.out.println("Color :"+color);
 
     }
     void updateCarId(String car, String carId)
@@ -113,14 +116,17 @@ public class C64Car
     {
 
     car c=new car();
-    c.SetEngineID(); // 印出enginID
-    c.setCarId();
-    c.setColor();
+    car ca=new car();
+//    c.SetEngineID(); // 印出enginID
+//    c.setCarId();
+//    c.setColor();
+
 
     System.out.println("\nCarFactory :");
     c.produceCar();
-    System.out.println("\nCarFactory :");
-    c.produceCar();
+    System.out.println("\n CaTEST");
+    ca.produceCar();
+
     System.out.println("\nTaxi Factory :");
     TaxiFactory tf=new TaxiFactory();
     tf.produceCar();
