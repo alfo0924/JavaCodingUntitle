@@ -5,7 +5,7 @@ import java.util.Random;
 class car  //類別:car
 {
     private String carId;
-    private String enginId;
+    private int enginId;
     private String color;
 
     private String car;
@@ -14,30 +14,31 @@ class car  //類別:car
 
     int numOfCars;
 
-    final static int engineID() //方法:引擎id
+    void SetEngineID() //方法:引擎id
     {
-        int enginId=((int)(Math.random()*100000000));
+         enginId=((int)(Math.random()*100000000));
 
         System.out.println("\nEngine id :"+enginId);
 
 
 
-        return enginId;
+
 
     }
     void setCarId()
     {
         String charaters=("ABCDEFGHIJKLMOPQRSTUVWXYZ");
         this.carId=carId;
-        StringBuilder carId = new StringBuilder("T");
+        StringBuilder carid = new StringBuilder("T");
         for (int i = 0; i < 2; i++) {
-            carId.append(charaters.charAt(random.nextInt(charaters.length())));
+            carid.append(charaters.charAt(random.nextInt(charaters.length())));
         }
-        carId.append('-');
+        carid.append('-');
         for (int i = 0; i < 3; i++) {
-            carId.append(random.nextInt(10));
+            carid.append(random.nextInt(10));
         }
-        System.out.println("Set CarId :"+carId);
+        carId=carid.toString();
+        System.out.println("Set CarId :"+carid);
 
 
     }
@@ -65,9 +66,10 @@ class car  //類別:car
     {
 
 
+
         int produce=((int)(Math.random()*100));
         System.out.println("Produce cars :"+produce);
-        System.out.println("Engine Id :"+enginId);
+        System.out.println("Engine Id :"+ enginId);
         System.out.println("Car Id :"+carId);
         System.out.println("Color :"+color);
 
@@ -90,7 +92,7 @@ class car  //類別:car
 
 
 }
-class taxiFactory extends car //類別:計程車工廠
+class TaxiFactory extends car //類別:計程車工廠
 {
 
 
@@ -111,12 +113,18 @@ public class C64Car
     {
 
     car c=new car();
-    c.engineID(); // 印出enginID
+    c.SetEngineID(); // 印出enginID
     c.setCarId();
     c.setColor();
 
     System.out.println("\nCarFactory :");
     c.produceCar();
+    System.out.println("\nCarFactory :");
+    c.produceCar();
+    System.out.println("\nTaxi Factory :");
+    TaxiFactory tf=new TaxiFactory();
+    tf.produceCar();
+
 
 
 
