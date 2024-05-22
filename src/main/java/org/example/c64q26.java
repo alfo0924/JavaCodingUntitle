@@ -1,199 +1,95 @@
-//// Car.java
-//public class Car {
+//import java.util.*;
+//
+//class car {
 //    private String carId;
-//    private String engineId;
+//    private int enginId;
 //    private String color;
+//    private boolean carIdUpdated = false; // Add boolean flag
+//    Random random = new Random();
+//    String[] COLORS = {"White", "Black", "Blue"};
+//    int numOfCars;
 //
-//    public Car(String engineId) {
-//        this.engineId = engineId;
+//    void setCarId() {
+//        // Generate carId
+//        carId = generateCarId();
+//        carIdUpdated = true; // Set flag to true after updating carId
+//        System.out.println("Set CarId :" + carId);
 //    }
 //
-//    public Car(String carId, String engineId, String color) {
-//        this.carId = carId;
-//        this.engineId = engineId;
-//        this.color = color;
+//    void updateCarId(car car, String carId) {
+//        // Same as before
 //    }
 //
-//    public String getEngineId() {
-//        return engineId;
-//    }
-//
-//    public String getCarId() {
-//        return carId;
-//    }
-//
-//    public void setCarId(String carId) {
-//        this.carId = carId;
-//    }
-//
-//    public String getColor() {
-//        return color;
-//    }
-//
-//    public void setColor(String color) {
-//        this.color = color;
-//    }
-//}
-//
-//// CarFactory.java
-//public class CarFactory {
-//    private int numOfCars;
-//
-//    public CarFactory() {
-//        this.numOfCars = 0;
-//    }
-//
-//    public int getProducedCars() {
-//        return numOfCars;
-//    }
-//
-//    public Car produceCar() {
-//        String engineId = generateEngineId();
-//        String carId = generateCarId();
-//        String color = generateColor();
-//        Car car = new Car(carId, engineId, color);
-//        numOfCars++;
-//        return car;
-//    }
-//
-//    public boolean updateCarId(Car car, String carId) {
-//        if (validateCarId(carId)) {
-//            car.setCarId(carId);
-//            return true;
+//    void printOut() {
+//        // Print only if carId has not been updated
+//        if (!carIdUpdated) {
+//            System.out.println("CarId : " + carId);
 //        }
-//        return false;
+//        // Same for other attributes
 //    }
 //
-//    public boolean updateCarColor(Car car, String color) {
-//        if (validateColor(color)) {
-//            car.setColor(color);
-//            return true;
-//        }
-//        return false;
-//    }
-//
-//    private String generateEngineId() {
-//        // generate 8-digit engineId
-//        return String.valueOf((int) (Math.random() * 10000000));
-//    }
-//
+//    // Method to generate carId
 //    private String generateCarId() {
-//        // generate 8-character carId in the format C[2 letters]-[4 digits]
-//        String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-//        String carId = "C";
+//        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//        StringBuilder carId = new StringBuilder();
+//        carId.append("C");
 //        for (int i = 0; i < 2; i++) {
-//            carId += letters.charAt((int) (Math.random() * letters.length()));
+//            carId.append(characters.charAt(random.nextInt(characters.length())));
 //        }
-//        carId += "-";
-//        for (int i = 0; i < 4; i++) {
-//            carId += (int) (Math.random() * 10);
-//        }
-//        return carId;
-//    }
-//
-//    private String generateColor() {
-//        // generate a random color from White, Black, Blue
-//        String[] colors = {"White", "Black", "Blue"};
-//        return colors[(int) (Math.random() * colors.length)];
-//    }
-//
-//    private boolean validateCarId(String carId) {
-//        // validate carId format
-//        return carId.matches("C[A-Z]{2}-\\d{4}");
-//    }
-//
-//    private boolean validateColor(String color) {
-//        // validate color
-//        return color.equals("White") || color.equals("Black") || color.equals("Blue");
-//    }
-//}
-//
-//// TaxiFactory.java
-//public class TaxiFactory extends CarFactory {
-//    @Override
-//    public Car produceCar() {
-//        String engineId = generateEngineId();
-//        String carId = generateTaxiCarId();
-//        String color = "Yellow";
-//        Car car = new Car(carId, engineId, color);
-//        numOfCars++;
-//        return car;
-//    }
-//
-//    private String generateTaxiCarId() {
-//        // generate 8-character carId in the format T[2 letters]-[3 digits]
-//        String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-//        String carId = "T";
-//        for (int i = 0; i < 2; i++) {
-//            carId += letters.charAt((int) (Math.random() * letters.length()));
-//        }
-//        carId += "-";
+//        carId.append('-');
 //        for (int i = 0; i < 3; i++) {
-//            carId += (int) (Math.random() * 10);
+//            carId.append(random.nextInt(10));
 //        }
-//        return carId;
+//        return carId.toString();
 //    }
 //}
 //
-//// ElectricCarFactory.java
-//public class ElectricCarFactory extends CarFactory {
+//class TaxiFactory extends car {
+//    private boolean taxiIdUpdated = false; // Add boolean flag
+//
 //    @Override
-//    public Car produceCar() {
-//        String engineId = generateEngineId();
-//        String carId = generateElectricCarId();
-//        String color = generateColor();
-//        Car car = new Car(carId, engineId, color);
-//        numOfCars++;
-//        return car;
+//    void setCarId() {
+//        // Same as before
 //    }
 //
-//    private String generateElectricCarId() {
-//        // generate 8-character carId in the format E[2 letters]-[4 digits]
-//        String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-//        String carId = "E";
-//        for (int i = 0; i < 2; i++) {
-//            carId += letters.charAt((int) (Math.random() * letters.length()));
+//    void updateTaxiId(car car, String carId) {
+//        // Same as before
+//        taxiIdUpdated = true; // Set flag to true after updating taxiId
+//    }
+//
+//    void printOut() {
+//        // Print only if taxiId has not been updated
+//        if (!taxiIdUpdated) {
+//            System.out.println("TaxiId : " + carId);
 //        }
-//        carId += "-";
-//        for (int i = 0; i < 4;i++) {
-//            carId += (int) (Math.random() * 10);
-//        }
-//        return carId;
+//        // Same for other attributes
 //    }
 //}
 //
-//// Main.java
-//public class c64q26 {
+//class ElectricCarFactory extends car {
+//    private boolean eCarIdUpdated = false; // Add boolean flag
+//
+//    @Override
+//    void setCarId() {
+//        // Same as before
+//    }
+//
+//    void updateElectricCarId(car car, String carId) {
+//        // Same as before
+//        eCarIdUpdated = true; // Set flag to true after updating eCarId
+//    }
+//
+//    void printOut() {
+//        // Print only if eCarId has not been updated
+//        if (!eCarIdUpdated) {
+//            System.out.println("EcarId : " + carId);
+//        }
+//        // Same for other attributes
+//    }
+//}
+//
+//public class C64Car {
 //    public static void main(String[] args) {
-//        CarFactory carFactory = new CarFactory();
-//        Car car = carFactory.produceCar();
-//        System.out.println("Original car: ");
-//        System.out.println("ID: " + car.getCarId());
-//        System.out.println("Engine ID: " + car.getEngineId());
-//        System.out.println("Color: " + car.getColor());
-//        System.out.println();
-//
-//        boolean updated = carFactory.updateCarId(car, "CAB-1234");
-//        System.out.println("Update car ID to CAB-1234? " + updated);
-//        System.out.println("Updated car: ");
-//        System.out.println("ID: " + car.getCarId());
-//        System.out.println("Engine ID: " + car.getEngineId());
-//        System.out.println("Color: " + car.getColor());
-//        System.out.println();
-//
-//        TaxiFactory taxiFactory = new TaxiFactory();
-//        Car taxi = taxiFactory.produceCar();
-//        System.out.println("TaxiFactory produced car: ");
-//        System.out.println("ID: " + taxi.getCarId());
-//        System.out.println("Engine ID: " + taxi.getEngineId());
-//        System.out.println("Color: " + taxi.getColor());
-//        System.out.println();
-//
-//        ElectricCarFactory electricCarFactory = new ElectricCarFactory();
-//        Car electricCar = electricCarFactory.produceCar();
-//        System.out.println("ElectricCarFactory produced car: ");
-//        System.out.println("ID: " + electricCar.getCarId());
-//        System.out.println("Engine ID: " + electricCar.getEngineId());
-//        System.out.println("Color: " + electricCar.getColor());
+//        // Same as before
 //    }
 //}
