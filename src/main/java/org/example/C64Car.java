@@ -112,11 +112,9 @@ class TaxiFactory extends car //類別:計程車工廠
             carid.append(random.nextInt(10));
         }
         System.out.println("Set CarId :"+carid);
-
     }
     void updateTaxiId(car car, String carId)
     {
-
         boolean input=false;
         while(!input){
             if (carId.matches("T[aA-zZ]{2}-[\\d]{3}")) {
@@ -131,8 +129,6 @@ class TaxiFactory extends car //類別:計程車工廠
                 String inputCarId=scanner.nextLine();
                 carId=inputCarId;
                 input=false;
-
-
             }
         }
     }
