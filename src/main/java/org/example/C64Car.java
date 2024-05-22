@@ -44,10 +44,7 @@ class car  //類別:car
 
         System.out.println("Set Color :"+color);
 
-
     }
-
-
 
     void getProducedCars(int cars)
     {
@@ -65,7 +62,6 @@ class car  //類別:car
     }
     void updateCarId(car car, String carId)
     {
-
             boolean input=false;
             while(!input){
             if (carId.matches("C[aA-zZ]{2}-[\\d]{3}")) {
@@ -81,11 +77,9 @@ class car  //類別:car
                 carId=inputCarId;
                 input=false;
 
-
             }
         }
     }
-
     void updateCarColor(car car, String carId)
     {
 
@@ -99,8 +93,6 @@ class car  //類別:car
         setCarId();    // Generate a new car ID    從方法抓取就可以抓取新的CarID
         setColor();    // Generate a new color     從方法抓取就可以抓取新的ColorID
     }
-
-
 }
 class TaxiFactory extends car //類別:計程車工廠
 {
@@ -122,10 +114,32 @@ class TaxiFactory extends car //類別:計程車工廠
         System.out.println("Set CarId :"+carid);
 
     }
+    void updateTaxiId(car car, String carId)
+    {
+
+        boolean input=false;
+        while(!input){
+            if (carId.matches("T[aA-zZ]{2}-[\\d]{3}")) {
+                System.out.println("Correct");
+                input=true;
+
+            } else {
+                System.out.println("Invalid ! Please try again !");
+//                System.out.println("");
+                Scanner scanner=new Scanner(System.in);
+                System.out.println("Please input TaxiCarId :");
+                String inputCarId=scanner.nextLine();
+                carId=inputCarId;
+                input=false;
+
+
+            }
+        }
+    }
 
 
 }
-class EletronicCarFactory extends car //類別:電車工廠
+class ElectricCarFactory extends car //類別:電車工廠
 {
 
     @Override // 覆寫父類
@@ -144,6 +158,28 @@ class EletronicCarFactory extends car //類別:電車工廠
         }
         System.out.println("Set CarId :"+carid);
 
+    }
+    void updateElectricCarId(car car, String carId)
+    {
+
+        boolean input=false;
+        while(!input){
+            if (carId.matches("E[aA-zZ]{2}-[\\d]{3}")) {
+                System.out.println("Correct");
+                input=true;
+
+            } else {
+                System.out.println("Invalid ! Please try again !");
+//                System.out.println("");
+                Scanner scanner=new Scanner(System.in);
+                System.out.println("Please input CarId :");
+                String inputCarId=scanner.nextLine();
+                carId=inputCarId;
+                input=false;
+
+
+            }
+        }
     }
 
 
@@ -166,7 +202,7 @@ public class C64Car
     tf.printOut();
 
     System.out.println("\nEletronicCarFactory :");
-    EletronicCarFactory etcf=new EletronicCarFactory();
+    ElectricCarFactory etcf=new ElectricCarFactory();
     etcf.printOut();
 
     Scanner scanner=new Scanner(System.in);
@@ -174,18 +210,16 @@ public class C64Car
 
     System.out.println("Type in carId to update carId :");
     String inputCarId=scanner.nextLine();
-
     c.updateCarId(c,inputCarId);
 
+    System.out.println("Type in TaxiId to update Taxi carId :");
+    String inputTaxiId=scanner.nextLine();
+    tf.updateTaxiId(tf,inputTaxiId);
 
-
+    System.out.println("Type in ElId to update Electric carId :");
+    String inputEcarId=scanner.nextLine();
+    etcf.updateElectricCarId(etcf,inputEcarId);
 
     }
-
-
-
-
-
-
 
 }
