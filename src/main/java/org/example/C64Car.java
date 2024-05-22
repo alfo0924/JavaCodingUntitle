@@ -226,8 +226,6 @@ public class C64Car
     etcf.updateElectricCarId(etcf,inputEcarId);
 
 
-
-
     System.out.println("\n");
     etcf.printOut();
     tf.printOut();
