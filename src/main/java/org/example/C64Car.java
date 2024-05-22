@@ -82,9 +82,23 @@ class car  //類別:car
     }
     void updateCarColor(car car, String carId)
     {
-
-
-
+        boolean inputColor=false;
+        while(!inputColor)
+        {
+         if(carId.equalsIgnoreCase("Blue")||carId.equalsIgnoreCase("White")||carId.equalsIgnoreCase("Black"))
+         {
+             System.out.println("Color input Correct !");
+             inputColor=true;
+         }
+         else
+         {
+             System.out.println("Color input Wrong !");
+             Scanner scanner=new Scanner(System.in);
+             System.out.println("PLease enter selected car color :");
+             carId=scanner.nextLine();
+             inputColor=false;
+         }
+        }
     }
     void printOut()
     {
@@ -133,7 +147,6 @@ class TaxiFactory extends car //類別:計程車工廠
         }
     }
 
-
 }
 class ElectricCarFactory extends car //類別:電車工廠
 {
@@ -177,11 +190,7 @@ class ElectricCarFactory extends car //類別:電車工廠
             }
         }
     }
-
-
-
 }
-
 
 public class C64Car
 {
@@ -204,7 +213,7 @@ public class C64Car
     Scanner scanner=new Scanner(System.in);
 
 
-    System.out.println("Type in carId to update carId :");
+    System.out.println("\nType in carId to update carId :");
     String inputCarId=scanner.nextLine();
     c.updateCarId(c,inputCarId);
 
@@ -215,6 +224,19 @@ public class C64Car
     System.out.println("Type in ElId to update Electric carId :");
     String inputEcarId=scanner.nextLine();
     etcf.updateElectricCarId(etcf,inputEcarId);
+
+
+
+
+    System.out.println("\n");
+    etcf.printOut();
+    tf.printOut();
+    c.printOut();
+
+
+    System.out.println("\nPlease input car color :");
+    String inputCarColor=scanner.nextLine();
+    c.updateCarColor(c,inputCarColor);
 
     }
 
