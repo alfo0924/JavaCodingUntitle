@@ -24,24 +24,25 @@ class parent
 //}
 
 class child extends parent
+{@Override
+void show()
 {
-    child()
-    {
-
-//        super.show();
-    }
-//    void t()
-//    {
-//    }
+System.out.println("Hellowrold override !");
+}
 
 }
 public class c64cchild
 {
     public static void main(String[]args)
     {
+        parent p =new parent();
+        p.show();
+
         child c=new child();
         c.show();
-//        c.t();
+
+        parent p1=new parent();
+        p1.show();
 
 
     }
