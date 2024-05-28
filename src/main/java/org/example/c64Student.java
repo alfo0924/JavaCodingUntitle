@@ -34,7 +34,7 @@
 //     if(obj instanceof Student)
 //     {
 //Student otherStudent=(Student)obj;
-//     if(this.sId.equals(otherStudent);
+//     if(this.sId.equals(otherStudent.sId);
 //     {
 //     return true;
 //     }

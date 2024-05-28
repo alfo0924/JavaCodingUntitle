@@ -267,23 +267,50 @@ class CarIdUtil extends car
     System.out.println(c);
      }
  }
- class organization
+ class organization extends car
  {
-     int numOfWhiteCars()
+     void buyCars(int car1,int car2 ,int car3)
+     {
+         TaxiFactory.numOfCars;
+         car2=numOfCars;
+         car3=numOfCars;
+
+
+     }
+     void buyCar(car car)
      {
 
+         numOfCars+=1+(Math.random()*10);
+         System.out.println("Cars has bought :"+numOfCars);
+
+     }
+     int numOfWhiteCars()
+     {
+        int WhiteCars=(int)Math.abs(Math.random()*100); //add abs test
+        this.numOfCars+=WhiteCars;
+        System.out.println("White cars has bought :"+numOfCars);
+        return numOfCars;
      }
      int numOfBlackCars()
      {
-
+         int BlackCars=(int)Math.abs(Math.random()*100);
+         this.numOfCars+=BlackCars;
+         System.out.println("Black cars has bought :"+numOfCars);
+         return numOfCars;
      }
      int numOfBlueCars()
      {
-
+         int BlueCars=(int)Math.abs(Math.random()*100);
+         this.numOfCars+=BlueCars;
+         System.out.println("Blue cars has bought :"+numOfCars);
+         return numOfCars;
      }
      int numOFYellowCars()
      {
-
+        int YellowCars=(int)Math.abs(Math.random()*100);
+        this.numOfCars+=YellowCars;
+        System.out.println("Yellow cars has bought :"+YellowCars);
+        return numOfCars;
      }
  }
 public class C64Car
@@ -323,22 +350,32 @@ public class C64Car
 //    tf.printOut();
 //    c.printOut();
 
-
-    System.out.println("\nPlease input car color :");
-    String inputCarColor=scanner.nextLine();
-    c.updateCarColor(c,inputCarColor);
+//
+//    System.out.println("\nPlease input car color :");
+//    String inputCarColor=scanner.nextLine();
+//    c.updateCarColor(c,inputCarColor);
 
     RandomCharacterGenerator rg=new RandomCharacterGenerator();
 //    rg.pt(); // only produce one character of alphabet
 
         CarIdUtil cru=new CarIdUtil();
-        cru.generateLetter();//Generate random  single letter ;
-        cru.generateLetter();
-        cru.generateLetter();
-        System.out.println("-");
-        cru.generateNumber();
-        cru.generateNumber();
-        cru.generateNumber();
+//        cru.generateLetter();//Generate random  single letter ;
+//        cru.generateLetter();
+//        cru.generateLetter();
+//        System.out.println("-");
+//        cru.generateNumber();
+//        cru.generateNumber();
+//        cru.generateNumber();
+
+        System.out.println("\nCar sales : ");
+        organization og=new organization();
+//        og.buyCar();
+        og.numOfWhiteCars();
+        og.numOfBlackCars();
+        og.numOfBlueCars();
+        og.numOFYellowCars();
+        System.out.println("\n Organization bought some cars : ");
+        og.buycars();
 
     }
 
