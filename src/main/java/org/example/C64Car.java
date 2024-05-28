@@ -271,10 +271,9 @@ class CarIdUtil extends car
  {
      void buyCars(int car1,int car2 ,int car3)
      {
-         TaxiFactory.numOfCars;
-         car2=numOfCars;
-         car3=numOfCars;
 
+      numOfCars=car1+car2+car3;
+        getProducedCars(numOfCars);
 
      }
      void buyCar(car car)
@@ -375,7 +374,8 @@ public class C64Car
         og.numOfBlueCars();
         og.numOFYellowCars();
         System.out.println("\n Organization bought some cars : ");
-        og.buycars();
+        og.buyCars(3,2,5);
+        og.getProducedCars(3+2+5);
 
     }
 
