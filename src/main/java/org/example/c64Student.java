@@ -34,7 +34,7 @@
 //     if(obj instanceof Student)
 //     {
 //Student otherStudent=(Student)obj;
-//     if(this.sId.equals(otherStudent.sId);
+//     if(this.sId.equals(otherStudent);
 //     {
 //     return true;
 //     }
@@ -62,7 +62,7 @@
 //    System.out.println(student1.equals(("hello")));
 //    System.out.println(student1.equals((student2)));
 //    System.out.println(student1.equals((student3)));
-//    System.out.println(student1.getStudent(student1,student2,student3));
+////    System.out.println(student1.getStudent(student1,student2,student3));
 //
 //
 //    }

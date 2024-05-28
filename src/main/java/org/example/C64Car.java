@@ -8,18 +8,14 @@ class car  //類別:car
     private String carId;
     private int enginId;
     private String color;
-
     private String car;
     Random random=new Random(); //建立隨機取樣套件
     String[] COLORS = {"White", "Black", "Blue"};
     int numOfCars;
-
     void SetEngineID() //方法:引擎id
     {
          enginId=((int)(Math.random()*100000000));
-
         System.out.println("Engine id :"+enginId);
-
     }
     void setCarId()
     {
@@ -34,24 +30,16 @@ class car  //類別:car
             carid.append(random.nextInt(10));
         }
         System.out.println("Set CarId :"+carid);
-
-
     }
     void setColor()
     {
-
         color=COLORS[random.nextInt(COLORS.length)]; //從 COLORS array 裡透過.random 抓取隨機值
-
-
         System.out.println("Set Color :"+color);
-
     }
-
     void getProducedCars(int cars)
     {
         numOfCars=+cars;
         System.out.println("Total Produce :"+numOfCars);
-
     }
     void produceCar()
     {
@@ -196,58 +184,80 @@ class ElectricCarFactory extends car //類別:電車工廠
 class CarIdUtil extends car
 {
 
-//    public class CarIdUtil {
-//
-//        private static final Random random = new Random();
-//
-//        public static String generateCarId() {
-//            return "C" + generateLetter() + generateLetter() + "-" + generateNumber() + generateNumber() + generateNumber() + generateNumber();
-//        }
-//
-//        public static String generateTaxiId() {
-//            return "T" + generateLetter() + generateLetter() + "-" + generateNumber() + generateNumber() + generateNumber();
-//        }
-//
-//        public static String generateElectricCarId() {
-//            return "E" + generateLetter() + generateLetter() + "-" + generateNumber() + generateNumber() + generateNumber() + generateNumber();
-//        }
-//
-//        public static boolean isValidCarId(String carId) {
-//            return carId.matches("C[A-Z]{2}-\\d{4}");
-//        }
-//
-//        public static boolean isValidTaxiId(String carId) {
-//            return carId.matches("T[A-Z]{2}-\\d{3}");
-//        }
-//
-//        public static boolean isValidElectricCarId(String carId) {
-//            return carId.matches("E[A-Z]{2}-\\d{4}");
-//        }
-//
-//        public static String generateLetter() {
-//            return String.valueOf((char) ('A' + random.nextInt(26)));
-//        }
-//
-//        public static String generateNumber() {
-//            return String.valueOf(random.nextInt(10));
-//        }
-//    }
-//
 
      public static String generateCarId()
     {
-        String c="";
-//        String charaters="ABCDEFGGIJKLMOPQRSTUVWXYZ";
-//        this.cardId=cardId;
-//        StringBuilder
-        return c;
+        String carId="";
+        return carId;
 
     }
+    public static String generateTaxiId()
+    {
+        String TaxiId="";
+        return TaxiId;
 
+    }
+    public static String generateEletricId()
+    {
+        String EletricId="";
+        return EletricId;
+    }
+    public boolean isValidCarId(String carId)
+    {
+//     carId=false;
+    if(carId.matches("C[aA-zZ]{2}-[/d]+{3}"))
+    {
+        System.out.println("True");
+     return true;
+    }
+    else {
+        System.out.println("False");
+        return false;
+    }
+    }
+    public boolean isValidTaxiId(String TaxiId)
+    {
+        if(TaxiId.matches("T[aA-zZ]{2}-[/d]+{3}"))
+        {
+            System.out.println("True");
+            return true;
+        }
+        else
+        {
+            System.out.println("False");
+            return false;
+        }
+    }
+    public boolean isValidElectricCarId(String EcarId)
+    {
+        if(EcarId.matches("E[aA-zZ]{2}-[/d]{3}"))
+        {
+            System.out.println("True");
+            return true;
+        }
+        else
+        {
+            System.out.println("False");
+            return false;
+        }
+    }
+    public String generateLetter()
+    {
+        String ab="";
 
+        Random a=new Random();
+        char c=(char)(a.nextInt(26)+'a');
+        System.out.println(c);
 
+        return ab;
 
-
+    }
+    public String generateNumber()
+    {   String a="";
+        int num=(int)(Math.random()*10);
+        System.out.println(num);
+        return a;
+    }
 }
  class RandomCharacterGenerator {
     void pt()
@@ -255,6 +265,25 @@ class CarIdUtil extends car
     Random r = new Random();
      char c = (char) (r.nextInt(26) + 'a');
     System.out.println(c);
+     }
+ }
+ class organization
+ {
+     int numOfWhiteCars()
+     {
+
+     }
+     int numOfBlackCars()
+     {
+
+     }
+     int numOfBlueCars()
+     {
+
+     }
+     int numOFYellowCars()
+     {
+
      }
  }
 public class C64Car
@@ -275,24 +304,24 @@ public class C64Car
 
     Scanner scanner=new Scanner(System.in);
 
-
-    System.out.println("\nType in carId to update carId :");
-    String inputCarId=scanner.nextLine();
-    c.updateCarId(c,inputCarId);
-
-    System.out.println("Type in TaxiId to update Taxi carId :");
-    String inputTaxiId=scanner.nextLine();
-    tf.updateTaxiId(tf,inputTaxiId);
-
-    System.out.println("Type in ElId to update Electric carId :");
-    String inputEcarId=scanner.nextLine();
-    etcf.updateElectricCarId(etcf,inputEcarId);
-
-
-    System.out.println("\n");
-    etcf.printOut();
-    tf.printOut();
-    c.printOut();
+//
+//    System.out.println("\nType in carId to update carId :");
+//    String inputCarId=scanner.nextLine();
+//    c.updateCarId(c,inputCarId);
+//
+//    System.out.println("Type in TaxiId to update Taxi carId :");
+//    String inputTaxiId=scanner.nextLine();
+//    tf.updateTaxiId(tf,inputTaxiId);
+//
+//    System.out.println("Type in ElId to update Electric carId :");
+//    String inputEcarId=scanner.nextLine();
+//    etcf.updateElectricCarId(etcf,inputEcarId);
+//
+//
+//    System.out.println("\n");
+//    etcf.printOut();
+//    tf.printOut();
+//    c.printOut();
 
 
     System.out.println("\nPlease input car color :");
@@ -300,7 +329,16 @@ public class C64Car
     c.updateCarColor(c,inputCarColor);
 
     RandomCharacterGenerator rg=new RandomCharacterGenerator();
-    rg.pt();
+//    rg.pt(); // only produce one character of alphabet
+
+        CarIdUtil cru=new CarIdUtil();
+        cru.generateLetter();//Generate random  single letter ;
+        cru.generateLetter();
+        cru.generateLetter();
+        System.out.println("-");
+        cru.generateNumber();
+        cru.generateNumber();
+        cru.generateNumber();
 
     }
 
