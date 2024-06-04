@@ -1,4 +1,14 @@
 package org.example;
+class StringBox
+{
+    private String getIntElement()
+    {
+        return getIntElement();
+    }
+
+
+
+}
 
 class Box
 {
@@ -18,7 +28,8 @@ public class C65GenericType
 {
     public static void main(String[] args) {
     Box box1=new Box();
-    box1.setElement("helo fcu");
+    box1.setElement();
+
 
 
 
