@@ -39,32 +39,18 @@ class loan {
 
   }
 
-
-
-
   //印出結果 當使用者呼叫此類別就會回傳到結果到Main裡
   void printOutLaonM()
   {
-
     loanM=loanFun(l1);
     System.out.println(loanM);
-
   }
-
-
-
-
 }
-
 public class YouthLoan {
   public static void main(String[] args) {
-
     java.util.Scanner scanner = new java.util.Scanner(System.in);
-
     //建立物件
     loan a1 = new loan();
-
-
     System.out.println("請輸入出生年 : ");
       while(scanner.hasNextInt()) {
 
