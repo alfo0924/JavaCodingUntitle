@@ -43,6 +43,67 @@ class time
                     }
                     else
                     {System.out.println("Invalid input : Wrong day input !");
+                        boolean input=false;
+                        while(!input)
+                        {
+                            System.out.println("Input date before next date :");
+                            Scanner scanner=new Scanner(System.in);
+                            System.out.println("Input year :");
+                            int typeYear=scanner.nextInt();
+                            System.out.println("Input month :");
+                            int typeMonth=scanner.nextInt();
+                            System.out.println("Input day :");
+                            int typeDay=scanner.nextInt();
+                            this.year=typeYear;
+                            this.month=typeMonth;
+                            this.day=typeDay;
+                            if(typeYear>=1812&&typeYear<=2012&&typeMonth>=1&&typeMonth<=12&&typeDay<=31&&typeDay>=1) {
+                                if (typeMonth == 1 || typeMonth == 3 || typeMonth == 5 || typeMonth == 7 || typeMonth == 8 || typeMonth == 10 || typeMonth == 12) {
+                                    if (day == 31) {
+                                        System.out.println("The next day :" + " " + year + " " + (month + 1) + " " + 1);
+                                        input = true;
+                                    } else {
+                                        System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
+                                        input = true;
+                                    }
+                                }//if2
+                                else if (typeMonth == 4 || typeMonth == 6 || typeMonth == 9 || typeMonth == 11) {
+                                    if (day <= 30 && day >= 1) {
+                                        if (day == 30) {
+                                            System.out.println("The next day :" + " " + year + " " + (month + 1) + " " + 1);
+                                            input = true;
+
+                                        } else {
+                                            System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
+                                            input = true;
+
+                                        }
+                                    }
+
+                                }//else if1
+                                else if (typeMonth ==2 )
+                                {
+                                    if (day <= 28 && day >= 1)
+                                    {
+                                        if(day==28)
+                                        {
+                                            System.out.println("The next day :" + " " + year + " " + (month + 1) + " " + 1);
+                                        }
+                                        else
+                                        {
+                                            System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
+                                        }
+                                    }
+
+
+                                }//elseif2
+                                else{
+                                    input=false;
+                                }
+
+
+                            }//if1
+                        }//while side
 
                         break;
                     }
@@ -67,6 +128,67 @@ class time
                     else
                     {
                         System.out.println("Invalid input : Wrong day input !");
+                        boolean input=false;
+                        while(!input)
+                        {
+                            System.out.println("Input date before next date :");
+                            Scanner scanner=new Scanner(System.in);
+                            System.out.println("Input year :");
+                            int typeYear=scanner.nextInt();
+                            System.out.println("Input month :");
+                            int typeMonth=scanner.nextInt();
+                            System.out.println("Input day :");
+                            int typeDay=scanner.nextInt();
+                            this.year=typeYear;
+                            this.month=typeMonth;
+                            this.day=typeDay;
+                            if(typeYear>=1812&&typeYear<=2012&&typeMonth>=1&&typeMonth<=12&&typeDay<=31&&typeDay>=1) {
+                                if (typeMonth == 1 || typeMonth == 3 || typeMonth == 5 || typeMonth == 7 || typeMonth == 8 || typeMonth == 10 || typeMonth == 12) {
+                                    if (day == 31) {
+                                        System.out.println("The next day :" + " " + year + " " + (month + 1) + " " + 1);
+                                        input = true;
+                                    } else {
+                                        System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
+                                        input = true;
+                                    }
+                                }//if2
+                                else if (typeMonth == 4 || typeMonth == 6 || typeMonth == 9 || typeMonth == 11) {
+                                    if (day <= 30 && day >= 1) {
+                                        if (day == 30) {
+                                            System.out.println("The next day :" + " " + year + " " + (month + 1) + " " + 1);
+                                            input = true;
+
+                                        } else {
+                                            System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
+                                            input = true;
+
+                                        }
+                                    }
+
+                                }//else if1
+                                else if (typeMonth ==2 )
+                                {
+                                    if (day <= 28 && day >= 1)
+                                    {
+                                        if(day==28)
+                                        {
+                                            System.out.println("The next day :" + " " + year + " " + (month + 1) + " " + 1);
+                                        }
+                                        else
+                                        {
+                                            System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
+                                        }
+                                    }
+
+
+                                }//elseif2
+                                else{
+                                    input=false;
+                                }
+
+
+                            }//if1
+                        }//while side
 
                         break;
                     }
@@ -98,8 +220,11 @@ class time
                             int typeMonth=scanner.nextInt();
                             System.out.println("Input day :");
                             int typeDay=scanner.nextInt();
+                            this.year=typeYear;
+                            this.month=typeMonth;
+                            this.day=typeDay;
                             if(typeYear>=1812&&typeYear<=2012&&typeMonth>=1&&typeMonth<=12&&typeDay<=31&&typeDay>=1) {
-                                if (typeMonth == 1 && typeMonth == 3 && typeMonth == 5 && typeMonth == 7 && typeMonth == 8 && typeMonth == 10 && typeMonth == 12) {
+                                if (typeMonth == 1 || typeMonth == 3 || typeMonth == 5 || typeMonth == 7 || typeMonth == 8 || typeMonth == 10 || typeMonth == 12) {
                                     if (day == 31) {
                                         System.out.println("The next day :" + " " + year + " " + (month + 1) + " " + 1);
                                         input = true;
@@ -108,7 +233,7 @@ class time
                                         input = true;
                                     }
                                 }//if2
-                                else if (typeMonth == 4 && typeMonth == 6 && typeMonth == 9 && typeMonth == 11) {
+                                else if (typeMonth == 4 || typeMonth == 6 || typeMonth == 9 || typeMonth == 11) {
                                     if (day <= 30 && day >= 1) {
                                         if (day == 30) {
                                             System.out.println("The next day :" + " " + year + " " + (month + 1) + " " + 1);
@@ -121,14 +246,30 @@ class time
                                         }
                                     }
 
-                                }//else if
+                                }//else if1
+                                else if (typeMonth ==2 )
+                                {
+                                    if (day <= 28 && day >= 1)
+                                    {
+                                        if(day==28)
+                                        {
+                                            System.out.println("The next day :" + " " + year + " " + (month + 1) + " " + 1);
+                                        }
+                                        else
+                                        {
+                                            System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
+                                        }
+                                    }
+
+
+                                }//elseif2
                                 else{
                                     input=false;
                                 }
 
 
                             }//if1
-                        }//while
+                        }//while side
                       break;
                     }
             }
