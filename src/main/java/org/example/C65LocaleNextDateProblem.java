@@ -35,6 +35,10 @@ class time
                             break;
 
                         }
+                        else if (month==12&&day==31)
+                        {
+                            System.out.println("The next day :"+" "+(year+1)+" "+1+" "+1);
+                        }
                         else
                         {
                             System.out.println("The next day :"+" "+year+" "+month+" "+(day+1));
@@ -62,7 +66,12 @@ class time
                                     if (day == 31) {
                                         System.out.println("The next day :" + " " + year + " " + (month + 1) + " " + 1);
                                         input = true;
-                                    } else {
+                                    }
+                                    else if(month==12&&day==31)
+                                    {
+                                        System.out.println("The next day :"+" "+ (year+1)+" "+1+" "+1);
+                                    }
+                                    else {
                                         System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
                                         input = true;
                                     }
@@ -76,7 +85,6 @@ class time
                                         } else {
                                             System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
                                             input = true;
-
                                         }
                                     }
 
@@ -94,17 +102,12 @@ class time
                                             System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
                                         }
                                     }
-
-
                                 }//elseif2
                                 else{
                                     input=false;
                                 }
-
-
                             }//if1
                         }//while side
-
                         break;
                     }
 
@@ -126,8 +129,7 @@ class time
                         }
                     }
                     else
-                    {
-                        System.out.println("Invalid input : Wrong day input !");
+                    {System.out.println("Invalid input : Wrong day input !");
                         boolean input=false;
                         while(!input)
                         {
@@ -147,7 +149,12 @@ class time
                                     if (day == 31) {
                                         System.out.println("The next day :" + " " + year + " " + (month + 1) + " " + 1);
                                         input = true;
-                                    } else {
+                                    }
+                                    else if(month==12&&day==31)
+                                    {
+                                        System.out.println("The next day :"+" "+ (year+1)+" "+1+" "+1);
+                                    }
+                                    else {
                                         System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
                                         input = true;
                                     }
@@ -161,10 +168,8 @@ class time
                                         } else {
                                             System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
                                             input = true;
-
                                         }
                                     }
-
                                 }//else if1
                                 else if (typeMonth ==2 )
                                 {
@@ -179,17 +184,12 @@ class time
                                             System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
                                         }
                                     }
-
-
                                 }//elseif2
                                 else{
                                     input=false;
                                 }
-
-
                             }//if1
                         }//while side
-
                         break;
                     }
 
@@ -228,7 +228,12 @@ class time
                                     if (day == 31) {
                                         System.out.println("The next day :" + " " + year + " " + (month + 1) + " " + 1);
                                         input = true;
-                                    } else {
+                                    }
+                                    else if(month==12&&day==31)
+                                    {
+                                        System.out.println("The next day :"+" "+ (year+1)+" "+1+" "+1);
+                                    }
+                                    else {
                                         System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
                                         input = true;
                                     }
@@ -242,7 +247,6 @@ class time
                                         } else {
                                             System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
                                             input = true;
-
                                         }
                                     }
 
@@ -260,14 +264,10 @@ class time
                                             System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
                                         }
                                     }
-
-
                                 }//elseif2
                                 else{
-                                    input=false;
+                                input=false;
                                 }
-
-
                             }//if1
                         }//while side
                       break;
