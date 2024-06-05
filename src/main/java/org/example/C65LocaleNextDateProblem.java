@@ -1,5 +1,5 @@
 package org.example;
-import java.util.*;
+import java.util.Scanner;
 class time
 {
     private int year;
