@@ -5,17 +5,39 @@ class time
     private int year;
     private int month;
     private int day;
-    public void setDate(int year,int month ,int day)
+    public void setDate()
     {
-        this.year=year;
-        this.month=month;
-        this.day=day;
+        boolean input=false;
+        while(!input)
+        {   System.out.println("Input date before next date :");
+            Scanner scanner=new Scanner(System.in);
+            System.out.println("Input year :");
+            int typeYear=scanner.nextInt();
+            System.out.println("Input month :");
+            int typeMonth=scanner.nextInt();
+            System.out.println("Input day :");
+            int typeDay=scanner.nextInt();
+            this.year=typeYear;
+            this.month=typeMonth;
+            this.day=typeDay;
+            if(typeYear>=1812&&typeYear<=2012&&typeMonth>=1&&typeMonth<=12&&typeDay>=1&&typeDay<=31)
+            {
+
+                input=true;
+            }
+            else
+            {
+                System.out.println("\nWrong input ! \n( Restrict Year range:1812~2012,Month range:1~12,Day range:1~31 ) \nPlease input again !\n");
+                input=false;
+            }
+        }
+
     }
-    void getDate(int year,int month,int day)
+    void getDate()
     {
-        this.year=year;
-        this.month=month;
-        this.day=day;
+//        this.year=year;
+//        this.month=month;
+//        this.day=day;
         System.out.println("The date you type : Year/month/day :"+" "+this.year+" "+this.month+" "+this.day);
 
             switch (month)
@@ -292,28 +314,8 @@ class time
 public class C65LocaleNextDateProblem {
     public static void main(String[] args) {
         time nextday=new time();
-        boolean input=false;
-        while(!input)
-        {   System.out.println("Input date before next date :");
-            Scanner scanner=new Scanner(System.in);
-            System.out.println("Input year :");
-            int typeYear=scanner.nextInt();
-            System.out.println("Input month :");
-            int typeMonth=scanner.nextInt();
-            System.out.println("Input day :");
-            int typeDay=scanner.nextInt();
-            if(typeYear>=1812&&typeYear<=2012&&typeMonth>=1&&typeMonth<=12&&typeDay>=1&&typeDay<=31)
-            {
-                nextday.setDate(typeYear,typeMonth,typeDay); //setDate
-                nextday.getDate(typeYear,typeMonth,typeDay);
-                input=true;
-            }
-            else
-            {
-                System.out.println("\nWrong input ! \n( Restrict Year range:1812~2012,Month range:1~12,Day range:1~31 ) \nPlease input again !\n");
-                input=false;
-            }
-        }
+        nextday.setDate(); //setDate
+        nextday.getDate();
     }
 
 }
