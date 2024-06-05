@@ -31,16 +31,10 @@ class time
                 input=false;
             }
         }
-
     }
     void getDate()
     {
-//        this.year=year;
-//        this.month=month;
-//        this.day=day;
-
         System.out.println("The date you type : Year/month/day :"+" "+this.year+" "+this.month+" "+this.day);
-
             switch (month)
             {
                 case(1):
@@ -52,7 +46,6 @@ class time
                 case(12):
                     if(day<=31&&day>=1)
                     {
-
                           if (month==12&&day==31)
                         {
                             System.out.println("The next day :"+" "+(year+1)+" "+1+" "+1);
@@ -136,7 +129,6 @@ class time
                         }//while side
                         break;
                     }
-
                 case(4):
                 case(6):
                 case(9):
@@ -198,7 +190,6 @@ class time
                                             System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
                                             input = true;
                                         }
-//
                                     }
                                 }//else if1
                                 else if (typeMonth ==2 )
@@ -224,7 +215,6 @@ class time
                         }//while side
                         break;
                     }
-
                 case(2):
                     if(day<=28&&day>=1)
                     {
@@ -276,13 +266,11 @@ class time
                                         if (day == 30) {
                                             System.out.println("The next day :" + " " + year + " " + (month + 1) + " " + 1);
                                             input = true;
-
                                         } else {
                                             System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
                                             input = true;
                                         }
                                     }
-
                                 }//else if1
                                 else if (typeMonth ==2 )
                                 {
@@ -298,7 +286,6 @@ class time
                                             System.out.println("The next day :" + " " + year + " " + month + " " + (day + 1));
                                             input=true;
                                         }
-
                                     }
                                 }//elseif2
                                 else{
@@ -309,7 +296,6 @@ class time
                       break;
                     }
             }
-
     }
 }
 public class C65LocaleNextDateProblem {
@@ -318,5 +304,4 @@ public class C65LocaleNextDateProblem {
         nextday.setDate(); //setDate
         nextday.getDate();
     }
-
 }
