@@ -38,6 +38,7 @@ class time
 //        this.year=year;
 //        this.month=month;
 //        this.day=day;
+
         System.out.println("The date you type : Year/month/day :"+" "+this.year+" "+this.month+" "+this.day);
 
             switch (month)
