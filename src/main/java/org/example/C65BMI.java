@@ -3,7 +3,6 @@ import java.util.Scanner;
  class IOException extends Exception {
     public  IOException()
     {
-
     }
     public IOException(String message)
     {
@@ -54,7 +53,6 @@ public class C65BMI {
             bmi.setHeightsetWeight();
             bmi.getBmi();
 //            throw new IOException();
-
         }
         catch (Exception e)                  //若執行錯誤就會印出錯誤
         {

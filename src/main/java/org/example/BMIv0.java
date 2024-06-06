@@ -4,8 +4,6 @@ class BMIf
 {
     private double height;
     private double weight;
-
-
     void bmifunction(double height,double weight)
     {
         double Height=height/100; //把身高數值/100 轉換公尺
