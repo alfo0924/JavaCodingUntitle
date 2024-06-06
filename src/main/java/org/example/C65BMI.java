@@ -1,5 +1,16 @@
 package org.example;
 import java.util.Scanner;
+ class InvalidNumberException extends Exception {
+
+    public  InvalidNumberException ()
+    {
+
+    }
+    public InvalidNumberException(String message)
+    {
+        super(message);
+    }
+}
 class BmiUtil
 {   private double height;
     private double weight;
@@ -38,6 +49,7 @@ public class C65BMI {
         try{                                //放入可能發生例外的部分
             bmi.setHeightsetWeight();
             bmi.getBmi();
+//            throw new InvalidNumberException();
         }
         catch (Exception e)                  //若執行錯誤就會印出錯誤
         {
